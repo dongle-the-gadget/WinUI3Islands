@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0-windows10.0.22000.0</TargetFramework>
+		<Platform>x64</Platform>
+		<Platforms>x64</Platforms>
+		<UseWinUI>true</UseWinUI>
+		<UseWPF>true</UseWPF>
+		<RuntimeIdentifiers>win10-x64</RuntimeIdentifiers>
+		<RootNamespace>Toolkit.WPF</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.2.220727.1-experimental1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\Libraries\Toolkit.Managed\Toolkit.Managed.csproj" />
+	</ItemGroup>
+
+</Project>

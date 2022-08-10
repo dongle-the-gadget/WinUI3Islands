@@ -1,0 +1,16 @@
+<Project>
+	<Target Name="CsWinRTRemoveWinMDReferences" BeforeTargets="BeforeCompile" AfterTargets="ResolveReferences" Condition="$(TargetFramework) == 'net6.0-windows10.0.22000.0' And $(IsProjection) != 'true'">
+		<ItemGroup>
+			<!--Move winmd references into private item group to prevent subsequent winmd reference errors-->
+			<CsWinRTRemovedReferences Include="@(ReferencePath)" Condition="'%(ReferencePath.Extension)' == '.winmd'" />
+			<!--Prevent NETSDK1130 errors from winmd references-->
+			<ReferencePath Remove="@(ReferencePath)" Condition="'%(ReferencePath.Extension)' == '.winmd'" />
+			<ReferencePathWithRefAssemblies Remove="@(CsWinRTRemovedReferences)"
+			  Condition="'%(CsWinRTRemovedReferences.Filename)%(CsWinRTRemovedReferences.Extension)' == '%(ReferencePathWithRefAssemblies.Filename)%(ReferencePathWithRefAssemblies.Extension)'" />
+			<!--Do not publish projection source winmds -->
+			<ReferenceCopyLocalPaths Remove="@(CsWinRTRemovedReferences)" />
+			<!--Remove winmd references from deps.json to prevent CLR failing unit test execution-->
+			<ReferenceDependencyPaths Remove="@(ReferenceDependencyPaths)" Condition="%(ReferenceDependencyPaths.Extension) == '.winmd'"/>
+		</ItemGroup>
+	</Target>
+</Project>
