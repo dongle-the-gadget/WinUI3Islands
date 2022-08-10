@@ -27,7 +27,7 @@ Experimental sample application demonstrating XAML Islands for WinUI 3.
 Item           | Status | Notes                                |
 ---------------|--------|--------------------------------------|
 Styles support (via Community Toolkit port) | ✔️ |
-WPF support | ❗ | Visual glitches are present, resizing is required on first launch. |
+WPF support | ❗ | Visual glitches are present, resizing is required on launch. |
 C++ support | ❗ | No theme detection for page background. |
 WinForms support | ❓ |
 Unpackaged support | ❓ | This sample doesn't provide unpackaged support. |
