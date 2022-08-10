@@ -38,6 +38,8 @@ Non-x64 architectures support | ❓ |
 ## Projects within solution
 - **Libraries**
   - `Toolkit`: Port of Community Toolkit's `XamlApplication` to WinUI 3.
+  
+     **Note:** the namespace has changed from `Microsoft.Toolkit.Win32.UI.XamlHost` to `Toolkit` to prevent issues with the C#/WinRT projection.
   - `Toolkit.Managed`: C#/WinRT projection for `Toolkit`.
 - **WPF**
   - `Toolkit.WPF`: Port of Community Toolkit's `WindowsXamlHost` (WPF) for WinUI 3.
