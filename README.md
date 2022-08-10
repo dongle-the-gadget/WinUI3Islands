@@ -15,10 +15,10 @@ Experimental sample application demonstrating XAML Islands for WinUI 3.
 4. Start the project.
 5. Wait for the project to compile and deploy on your machine.
 
-## What current works
-### Legend
+## What currently works
+### Status legends
 
-**Note:** all emojis use the Emoji 1.0 standard (2015) or Unicode 6.0 (2010).
+**Note:** all emojis use the Emoji 1.0 standard (2015) or the Unicode 6.0 standard (2010).
 
 ✔️ Works as expected | ❗ Works with issues | ❌ Doesn't work | ❓ Untested
 ---------------------|-----------------------|-----------------|---------------
@@ -33,3 +33,16 @@ WinForms support | ❓ |
 Unpackaged support | ❓ | This sample doesn't provide unpackaged support. |
 Custom C++ components support | ❓ |
 Custom C# components support | ❓ |
+Non-x64 architectures support | ❓ |
+
+## Projects within solution
+- **Libraries**
+  - `Toolkit`: Port of Community Toolkit's `XamlApplication` to WinUI 3.
+  - `Toolkit.Managed`: C#/WinRT projection for `Toolkit`.
+- **WPF**
+  - `Toolkit.WPF`: Port of Community Toolkit's `WindowsXamlHost` (WPF) for WinUI 3.
+  - `WinUI3Islands.WPF`: The WPF sample app.
+  - `WinUI3Islands.WPF.Package`: MSIX package for the WPF sample app.
+- **CPP:**
+  - `WinUI3Islands.Cpp`: The C++ sample app.
+  - `WinUI3Islands.CPP.Package`: MSIX package for the C++ sample app.
