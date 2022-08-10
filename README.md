@@ -43,6 +43,6 @@ Non-x64 architectures support | ❓ |
   - `Toolkit.WPF`: Port of Community Toolkit's `WindowsXamlHost` (WPF) for WinUI 3.
   - `WinUI3Islands.WPF`: The WPF sample app.
   - `WinUI3Islands.WPF.Package`: MSIX package for the WPF sample app.
-- **CPP:**
+- **CPP**
   - `WinUI3Islands.Cpp`: The C++ sample app.
   - `WinUI3Islands.CPP.Package`: MSIX package for the C++ sample app.
