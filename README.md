@@ -1,1 +1,35 @@
 # WinUI3Islands
+
+Experimental sample application demonstrating XAML Islands for WinUI 3.
+
+## Prerequisites
+- Visual Studio 2022 (with .NET Desktop Development, UWP app development and C++ app development workflow).
+- [Windows App SDK 1.2 Runtime](https://aka.ms/windowsappsdk/1.2/1.2.220727.1-experimental1/windowsappruntimeinstall-x64.exe).
+
+## Building the project
+1. Clone this repository.
+2. Open `WinUI3Islands.sln` in Visual Studio.
+3. Select the correct project as the startup project:
+   - For WPF, choose `WinUI3Islands.WPF.Package`.
+   - For C++, choose `WinUI3Islands.CPP.Package`.
+4. Start the project.
+5. Wait for the project to compile and deploy on your machine.
+
+## What current works
+### Legend
+
+**Note:** all emojis use the Emoji 1.0 standard (2015) or Unicode 6.0 (2010).
+
+✔️ Works as expected | ❗ Works with issues | ❌ Doesn't work | ❓ Untested
+---------------------|-----------------------|-----------------|---------------
+
+### Table
+Item           | Status | Notes                                |
+---------------|--------|--------------------------------------|
+Styles support (via Community Toolkit port) | ✔️ |
+WPF support | ❗ | Visual glitches are present, resizing is required on first launch. |
+C++ support | ❗ | No theme detection for page background. |
+WinForms support | ❓ |
+Unpackaged support | ❓ | This sample doesn't provide unpackaged support. |
+Custom C++ components support | ❓ |
+Custom C# components support | ❓ |
