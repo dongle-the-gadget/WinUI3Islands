@@ -6,8 +6,7 @@
         xmlns:local="clr-namespace:WinUI3Islands.WPF" 
         xmlns:toolkit="clr-namespace:Toolkit.WPF;assembly=Toolkit.WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
-        Background="Red">
+        Title="MainWindow" Height="450" Width="800">
     <Grid>
         <toolkit:WindowsXamlHost ChildChanged="WindowsXamlHost_ChildChanged" InitialTypeName="Microsoft.UI.Xaml.Controls.Page"/>
     </Grid>
