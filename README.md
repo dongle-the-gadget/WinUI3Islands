@@ -27,8 +27,8 @@ Experimental sample application demonstrating XAML Islands for WinUI 3.
 Item           | Status | Notes                                |
 ---------------|--------|--------------------------------------|
 Styles support (via Community Toolkit port) | ✔️ |
-WPF support | ❗ | Requires explicitly defined background. App crashes when window closes with "Invalid window handle." |
-C++ support | ❗ | No theme detection for page background. |
+C++ support | ✔️ |
+WPF support | ❗ | App crashes when window closes with "Invalid window handle" or when switching High Contrast settings. |
 Custom C++ components support | ❌ | Doesn't work without workarounds due to XBF files being improperly placed in `resources.pri`. |
 WinForms support | ❓ |
 Unpackaged support | ❓ | This sample doesn't provide unpackaged support. |

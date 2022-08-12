@@ -36,6 +36,11 @@ namespace WinUI3Islands.WPF
             if (page != null)
             {
                 page.Background = (Microsoft.UI.Xaml.Media.Brush)Program.xamlApp.Resources["ApplicationPageBackgroundThemeBrush"];
+                page.ActualThemeChanged += (_, _) =>
+                {
+                    if (page != null)
+                        page.Background = (Microsoft.UI.Xaml.Media.Brush)Program.xamlApp.Resources["ApplicationPageBackgroundThemeBrush"];
+                };
                 Microsoft.UI.Xaml.Controls.Button button = new();
                 button.VerticalAlignment = Microsoft.UI.Xaml.VerticalAlignment.Center;
                 button.HorizontalAlignment = Microsoft.UI.Xaml.HorizontalAlignment.Center;
