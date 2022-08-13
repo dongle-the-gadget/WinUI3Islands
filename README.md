@@ -29,10 +29,10 @@ Item           | Status | Notes                                |
 Styles support (via Community Toolkit port) | ✔️ |
 C++ support | ❗ | Theme detection doesn't work for root background. |
 WPF support | ❗ | App crashes when window closes with "Invalid window handle" or when switching High Contrast settings. |
-Custom C# components support | ❗ | Requires components to be set as a child in code-behind as `InitialTypeName` doesn't work. Sample not currently provided in repo. |
+Custom C# components support | ❗ | `XamlTypeInfo` cannot be found using Reflection. |
 Custom C++ components support | ❌ | Doesn't work without workarounds due to XBF files being improperly placed in `resources.pri`. |
-WinForms support | ❓ |
 Unpackaged support | ❓ | This sample doesn't provide unpackaged support. |
+WinForms support | ❓ |
 Non-x64 architectures support | ❓ |
 
 ## Projects within solution
