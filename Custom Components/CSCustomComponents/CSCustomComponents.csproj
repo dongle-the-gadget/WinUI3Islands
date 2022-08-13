@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net6.0-windows10.0.22000.0</TargetFramework>
+		<TargetPlatformMinVersion>10.0.19041.0</TargetPlatformMinVersion>
+		<RootNamespace>CSCustomComponents</RootNamespace>
+		<RuntimeIdentifiers>win10-x64</RuntimeIdentifiers>
+		<Platforms>x64</Platforms>
+		<UseWinUI>true</UseWinUI>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<CsWinRTComponent>true</CsWinRTComponent>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="CSUserControl.xaml" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Windows.CsWinRT" Version="1.6.5" />
+		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.2.220727.1-experimental1" />
+		<PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22000.194" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Page Update="CSUserControl.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </Page>
+	</ItemGroup>
+</Project>

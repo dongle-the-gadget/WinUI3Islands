@@ -8,6 +8,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <toolkit:WindowsXamlHost ChildChanged="WindowsXamlHost_ChildChanged" InitialTypeName="Microsoft.UI.Xaml.Controls.Page"/>
+        <toolkit:WindowsXamlHost InitialTypeName="CSCustomComponents.CSUserControl"/>
     </Grid>
 </Window>

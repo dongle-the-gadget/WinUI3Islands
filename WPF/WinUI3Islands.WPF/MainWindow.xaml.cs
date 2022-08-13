@@ -28,26 +28,5 @@ namespace WinUI3Islands.WPF
         {
             InitializeComponent();
         }
-
-        private void WindowsXamlHost_ChildChanged(object sender, EventArgs e)
-        {
-            var xamlHost = (WindowsXamlHost)sender;
-            Microsoft.UI.Xaml.Controls.Page page = (Microsoft.UI.Xaml.Controls.Page)xamlHost.GetUwpInternalObject();
-            if (page != null)
-            {
-                page.Background = (Microsoft.UI.Xaml.Media.Brush)Program.xamlApp.Resources["ApplicationPageBackgroundThemeBrush"];
-                page.ActualThemeChanged += (_, _) =>
-                {
-                    if (page != null)
-                        page.Background = (Microsoft.UI.Xaml.Media.Brush)Program.xamlApp.Resources["ApplicationPageBackgroundThemeBrush"];
-                };
-                Microsoft.UI.Xaml.Controls.Button button = new();
-                button.VerticalAlignment = Microsoft.UI.Xaml.VerticalAlignment.Center;
-                button.HorizontalAlignment = Microsoft.UI.Xaml.HorizontalAlignment.Center;
-                button.Content = "Click Me!";
-
-                page.Content = button;
-            }
-        }
     }
 }

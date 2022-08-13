@@ -16,6 +16,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\..\Custom Components\CSCustomComponents\CSCustomComponents.csproj" />
 	  <ProjectReference Include="..\Toolkit.WPF\Toolkit.WPF.csproj" />
 	</ItemGroup>
 

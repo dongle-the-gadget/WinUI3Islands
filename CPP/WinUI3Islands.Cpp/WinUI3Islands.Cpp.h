@@ -24,6 +24,8 @@
 #include <winrt/Microsoft.UI.Xaml.Input.h>
 #include <winrt/Microsoft.UI.Xaml.XamlTypeInfo.h>
 
+#include <winrt/CSCustomComponents.h>
+
 #include <winrt/Toolkit.h>
 
 #include <microsoft.ui.xaml.hosting.desktopwindowxamlsource.h>

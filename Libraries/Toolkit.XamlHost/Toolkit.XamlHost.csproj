@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net6.0-windows10.0.22000.0</TargetFrameworks>
+    <RootNamespace>Toolkit.XamlHost</RootNamespace>
+    <Platforms>x64</Platforms>
+    <MSBuildWarningsAsMessages>$(MSBuildWarningsAsMessages);NETSDK1106</MSBuildWarningsAsMessages>
+  </PropertyGroup>
+
+  <ItemGroup>
+
+    <Content Include="Toolkit.XamlHost.props">
+      <Pack>true</Pack>
+      <PackagePath>build</PackagePath>
+    </Content>
+
+    <Content Include="Toolkit.XamlHost.targets">
+      <Pack>true</Pack>
+      <PackagePath>build</PackagePath>
+    </Content>
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Toolkit.Managed\Toolkit.Managed.csproj" />
+  </ItemGroup>
+
+</Project>

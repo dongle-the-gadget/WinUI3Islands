@@ -114,18 +114,8 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 	check_hresult(interop->get_WindowHandle(&hWndXamlIsland));
 	SetWindowPos(hWndXamlIsland, HWND_TOP, 0, 0, rect.right - rect.left, rect.bottom - rect.top, SWP_SHOWWINDOW);
 
-	Controls::Page page;
-	page.Background(unbox_value<Microsoft::UI::Xaml::Media::Brush>(xapp.Resources().Lookup(box_value(L"ApplicationPageBackgroundThemeBrush"))));
-	page.ActualThemeChanged([page](const auto &, const auto &)
-		{
-			page.Background(unbox_value<Microsoft::UI::Xaml::Media::Brush>(xapp.Resources().Lookup(box_value(L"ApplicationPageBackgroundThemeBrush"))));
-		});
-	Controls::Button tb;
-	tb.Content(box_value(L"Hello world!"));
-	tb.HorizontalAlignment(HorizontalAlignment::Center);
-	tb.VerticalAlignment(VerticalAlignment::Center);
-	desktopXamlSource.Content(page);
-	page.Content(tb);
+	CSCustomComponents::CSUserControl userControl;
+	desktopXamlSource.Content(userControl);
 
 	if (!hWnd)
 	{
