@@ -41,6 +41,7 @@ Non-x64 architectures support | ❓ |
   
      **Note:** the namespace has changed from `Microsoft.Toolkit.Win32.UI.XamlHost` to `Toolkit` to prevent issues with the C#/WinRT projection.
   - `Toolkit.Managed`: C#/WinRT projection for `Toolkit`.
+  - `Toolkit.XamlHost`: Ported from Community Toolkit's `Microsoft.UI.Win32.UI.XamlHost`.
 - **Custom Components**
   - `CSCustomComponents`: Custom components, written in C#.
 - **WPF**
